@@ -7,23 +7,72 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE2FD3AB2725A5460090A5C3 /* ModelRequestForHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2FD3AA2725A5460090A5C3 /* ModelRequestForHistory.swift */; };
 		FE4CE92327237A0A00FC37D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4CE92227237A0A00FC37D0 /* AppDelegate.swift */; };
 		FE4CE92527237A0A00FC37D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4CE92427237A0A00FC37D0 /* SceneDelegate.swift */; };
-		FE4CE92727237A0A00FC37D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4CE92627237A0A00FC37D0 /* ViewController.swift */; };
+		FE4CE92727237A0A00FC37D0 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4CE92627237A0A00FC37D0 /* RootViewController.swift */; };
 		FE4CE92A27237A0A00FC37D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE4CE92827237A0A00FC37D0 /* Main.storyboard */; };
 		FE4CE92C27237A1100FC37D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE4CE92B27237A1100FC37D0 /* Assets.xcassets */; };
 		FE4CE92F27237A1100FC37D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE4CE92D27237A1100FC37D0 /* LaunchScreen.storyboard */; };
+		FE4CE93827237B2800FC37D0 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4CE93727237B2800FC37D0 /* SearchViewController.swift */; };
+		FE4CE93A27237B4B00FC37D0 /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4CE93927237B4B00FC37D0 /* SearchInteractor.swift */; };
+		FE4CE93C27237B6300FC37D0 /* SearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4CE93B27237B6300FC37D0 /* SearchPresenter.swift */; };
+		FE4CE93E27237B7500FC37D0 /* SearchRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4CE93D27237B7500FC37D0 /* SearchRouter.swift */; };
+		FE4CE94027237B8400FC37D0 /* SearchModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4CE93F27237B8400FC37D0 /* SearchModule.swift */; };
+		FE4CE94327237DCE00FC37D0 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4CE94227237DCE00FC37D0 /* HistoryViewController.swift */; };
+		FE4CE94527237DDF00FC37D0 /* HistoryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4CE94427237DDF00FC37D0 /* HistoryInteractor.swift */; };
+		FE4CE94727237DEC00FC37D0 /* HistoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4CE94627237DEC00FC37D0 /* HistoryPresenter.swift */; };
+		FE4CE94927237DF900FC37D0 /* HistoryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4CE94827237DF800FC37D0 /* HistoryRouter.swift */; };
+		FE4CE94B27237E0400FC37D0 /* HistoryModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4CE94A27237E0400FC37D0 /* HistoryModule.swift */; };
+		FE4CE94E2723802C00FC37D0 /* AlbumsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4CE94D2723802C00FC37D0 /* AlbumsCollectionViewCell.swift */; };
+		FE4CE9512723806700FC37D0 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = FE4CE9502723806700FC37D0 /* SnapKit */; };
+		FE4CE954272380E000FC37D0 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4CE953272380DF00FC37D0 /* Network.swift */; };
+		FE4CE9562723811800FC37D0 /* ModelAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4CE9552723811800FC37D0 /* ModelAlbum.swift */; };
+		FE4CE9592723FC6E00FC37D0 /* TracksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4CE9582723FC6E00FC37D0 /* TracksViewController.swift */; };
+		FE4CE95B2723FC9700FC37D0 /* ModuleTracksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4CE95A2723FC9700FC37D0 /* ModuleTracksView.swift */; };
+		FE4CE95D2723FD1300FC37D0 /* ModelTracks.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4CE95C2723FD1300FC37D0 /* ModelTracks.swift */; };
+		FE4CE95F2723FD6E00FC37D0 /* TracksInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4CE95E2723FD6E00FC37D0 /* TracksInteractor.swift */; };
+		FE4CE9612723FD7A00FC37D0 /* TracksPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4CE9602723FD7A00FC37D0 /* TracksPresenter.swift */; };
+		FE4CE9632723FD9200FC37D0 /* TracksRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4CE9622723FD9200FC37D0 /* TracksRouter.swift */; };
+		FE4CE96527242D0A00FC37D0 /* TracksTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4CE96427242D0A00FC37D0 /* TracksTableViewCell.swift */; };
+		FE4CE96827247D0E00FC37D0 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = FE4CE96727247D0E00FC37D0 /* Realm */; };
+		FE4CE96A27247D0E00FC37D0 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FE4CE96927247D0E00FC37D0 /* RealmSwift */; };
+		FE4CE96D27247EE300FC37D0 /* ModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4CE96C27247EE300FC37D0 /* ModelManager.swift */; };
+		FE4CE96F27247EFF00FC37D0 /* ModelHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4CE96E27247EFF00FC37D0 /* ModelHistory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FE2FD3AA2725A5460090A5C3 /* ModelRequestForHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelRequestForHistory.swift; sourceTree = "<group>"; };
 		FE4CE91F27237A0A00FC37D0 /* Fora Soft Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fora Soft Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE4CE92227237A0A00FC37D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE4CE92427237A0A00FC37D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FE4CE92627237A0A00FC37D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FE4CE92627237A0A00FC37D0 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		FE4CE92927237A0A00FC37D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FE4CE92B27237A1100FC37D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE4CE92E27237A1100FC37D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE4CE93027237A1100FC37D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE4CE93727237B2800FC37D0 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		FE4CE93927237B4B00FC37D0 /* SearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
+		FE4CE93B27237B6300FC37D0 /* SearchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPresenter.swift; sourceTree = "<group>"; };
+		FE4CE93D27237B7500FC37D0 /* SearchRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRouter.swift; sourceTree = "<group>"; };
+		FE4CE93F27237B8400FC37D0 /* SearchModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModule.swift; sourceTree = "<group>"; };
+		FE4CE94227237DCE00FC37D0 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		FE4CE94427237DDF00FC37D0 /* HistoryInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryInteractor.swift; sourceTree = "<group>"; };
+		FE4CE94627237DEC00FC37D0 /* HistoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPresenter.swift; sourceTree = "<group>"; };
+		FE4CE94827237DF800FC37D0 /* HistoryRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRouter.swift; sourceTree = "<group>"; };
+		FE4CE94A27237E0400FC37D0 /* HistoryModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryModule.swift; sourceTree = "<group>"; };
+		FE4CE94D2723802C00FC37D0 /* AlbumsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsCollectionViewCell.swift; sourceTree = "<group>"; };
+		FE4CE953272380DF00FC37D0 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		FE4CE9552723811800FC37D0 /* ModelAlbum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelAlbum.swift; sourceTree = "<group>"; };
+		FE4CE9582723FC6E00FC37D0 /* TracksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksViewController.swift; sourceTree = "<group>"; };
+		FE4CE95A2723FC9700FC37D0 /* ModuleTracksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleTracksView.swift; sourceTree = "<group>"; };
+		FE4CE95C2723FD1300FC37D0 /* ModelTracks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTracks.swift; sourceTree = "<group>"; };
+		FE4CE95E2723FD6E00FC37D0 /* TracksInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksInteractor.swift; sourceTree = "<group>"; };
+		FE4CE9602723FD7A00FC37D0 /* TracksPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksPresenter.swift; sourceTree = "<group>"; };
+		FE4CE9622723FD9200FC37D0 /* TracksRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksRouter.swift; sourceTree = "<group>"; };
+		FE4CE96427242D0A00FC37D0 /* TracksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksTableViewCell.swift; sourceTree = "<group>"; };
+		FE4CE96C27247EE300FC37D0 /* ModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelManager.swift; sourceTree = "<group>"; };
+		FE4CE96E27247EFF00FC37D0 /* ModelHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelHistory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +80,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE4CE96A27247D0E00FC37D0 /* RealmSwift in Frameworks */,
+				FE4CE96827247D0E00FC37D0 /* Realm in Frameworks */,
+				FE4CE9512723806700FC37D0 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +108,86 @@
 		FE4CE92127237A0A00FC37D0 /* Fora Soft Test */ = {
 			isa = PBXGroup;
 			children = (
+				FE4CE96B27247EAF00FC37D0 /* Entity */,
+				FE4CE93627237B0E00FC37D0 /* SearchView */,
+				FE4CE94127237DA500FC37D0 /* HistoryView */,
+				FE4CE952272380D100FC37D0 /* Helpers */,
+				FE4CE9572723FC4100FC37D0 /* TracksView */,
 				FE4CE92227237A0A00FC37D0 /* AppDelegate.swift */,
 				FE4CE92427237A0A00FC37D0 /* SceneDelegate.swift */,
-				FE4CE92627237A0A00FC37D0 /* ViewController.swift */,
+				FE4CE92627237A0A00FC37D0 /* RootViewController.swift */,
 				FE4CE92827237A0A00FC37D0 /* Main.storyboard */,
 				FE4CE92B27237A1100FC37D0 /* Assets.xcassets */,
 				FE4CE92D27237A1100FC37D0 /* LaunchScreen.storyboard */,
 				FE4CE93027237A1100FC37D0 /* Info.plist */,
 			);
 			path = "Fora Soft Test";
+			sourceTree = "<group>";
+		};
+		FE4CE93627237B0E00FC37D0 /* SearchView */ = {
+			isa = PBXGroup;
+			children = (
+				FE4CE94C27237FC800FC37D0 /* AlbumsCollection */,
+				FE4CE93727237B2800FC37D0 /* SearchViewController.swift */,
+				FE4CE93927237B4B00FC37D0 /* SearchInteractor.swift */,
+				FE4CE93B27237B6300FC37D0 /* SearchPresenter.swift */,
+				FE4CE93D27237B7500FC37D0 /* SearchRouter.swift */,
+				FE4CE93F27237B8400FC37D0 /* SearchModule.swift */,
+			);
+			path = SearchView;
+			sourceTree = "<group>";
+		};
+		FE4CE94127237DA500FC37D0 /* HistoryView */ = {
+			isa = PBXGroup;
+			children = (
+				FE4CE94227237DCE00FC37D0 /* HistoryViewController.swift */,
+				FE4CE94427237DDF00FC37D0 /* HistoryInteractor.swift */,
+				FE4CE94627237DEC00FC37D0 /* HistoryPresenter.swift */,
+				FE4CE94827237DF800FC37D0 /* HistoryRouter.swift */,
+				FE4CE94A27237E0400FC37D0 /* HistoryModule.swift */,
+			);
+			path = HistoryView;
+			sourceTree = "<group>";
+		};
+		FE4CE94C27237FC800FC37D0 /* AlbumsCollection */ = {
+			isa = PBXGroup;
+			children = (
+				FE4CE94D2723802C00FC37D0 /* AlbumsCollectionViewCell.swift */,
+			);
+			path = AlbumsCollection;
+			sourceTree = "<group>";
+		};
+		FE4CE952272380D100FC37D0 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FE4CE953272380DF00FC37D0 /* Network.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		FE4CE9572723FC4100FC37D0 /* TracksView */ = {
+			isa = PBXGroup;
+			children = (
+				FE4CE9582723FC6E00FC37D0 /* TracksViewController.swift */,
+				FE4CE95A2723FC9700FC37D0 /* ModuleTracksView.swift */,
+				FE4CE95E2723FD6E00FC37D0 /* TracksInteractor.swift */,
+				FE4CE9602723FD7A00FC37D0 /* TracksPresenter.swift */,
+				FE4CE9622723FD9200FC37D0 /* TracksRouter.swift */,
+				FE4CE96427242D0A00FC37D0 /* TracksTableViewCell.swift */,
+			);
+			path = TracksView;
+			sourceTree = "<group>";
+		};
+		FE4CE96B27247EAF00FC37D0 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				FE4CE95C2723FD1300FC37D0 /* ModelTracks.swift */,
+				FE4CE9552723811800FC37D0 /* ModelAlbum.swift */,
+				FE4CE96C27247EE300FC37D0 /* ModelManager.swift */,
+				FE4CE96E27247EFF00FC37D0 /* ModelHistory.swift */,
+				FE2FD3AA2725A5460090A5C3 /* ModelRequestForHistory.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +206,11 @@
 			dependencies = (
 			);
 			name = "Fora Soft Test";
+			packageProductDependencies = (
+				FE4CE9502723806700FC37D0 /* SnapKit */,
+				FE4CE96727247D0E00FC37D0 /* Realm */,
+				FE4CE96927247D0E00FC37D0 /* RealmSwift */,
+			);
 			productName = "Fora Soft Test";
 			productReference = FE4CE91F27237A0A00FC37D0 /* Fora Soft Test.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +239,10 @@
 				Base,
 			);
 			mainGroup = FE4CE91627237A0A00FC37D0;
+			packageReferences = (
+				FE4CE94F2723806700FC37D0 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				FE4CE96627247D0E00FC37D0 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+			);
 			productRefGroup = FE4CE92027237A0A00FC37D0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,9 +270,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE4CE92727237A0A00FC37D0 /* ViewController.swift in Sources */,
+				FE4CE95F2723FD6E00FC37D0 /* TracksInteractor.swift in Sources */,
+				FE4CE95B2723FC9700FC37D0 /* ModuleTracksView.swift in Sources */,
+				FE2FD3AB2725A5460090A5C3 /* ModelRequestForHistory.swift in Sources */,
+				FE4CE9632723FD9200FC37D0 /* TracksRouter.swift in Sources */,
+				FE4CE94727237DEC00FC37D0 /* HistoryPresenter.swift in Sources */,
+				FE4CE9592723FC6E00FC37D0 /* TracksViewController.swift in Sources */,
+				FE4CE94B27237E0400FC37D0 /* HistoryModule.swift in Sources */,
+				FE4CE94927237DF900FC37D0 /* HistoryRouter.swift in Sources */,
+				FE4CE9612723FD7A00FC37D0 /* TracksPresenter.swift in Sources */,
+				FE4CE92727237A0A00FC37D0 /* RootViewController.swift in Sources */,
+				FE4CE94027237B8400FC37D0 /* SearchModule.swift in Sources */,
+				FE4CE954272380E000FC37D0 /* Network.swift in Sources */,
 				FE4CE92327237A0A00FC37D0 /* AppDelegate.swift in Sources */,
+				FE4CE94E2723802C00FC37D0 /* AlbumsCollectionViewCell.swift in Sources */,
+				FE4CE96F27247EFF00FC37D0 /* ModelHistory.swift in Sources */,
+				FE4CE93C27237B6300FC37D0 /* SearchPresenter.swift in Sources */,
+				FE4CE93E27237B7500FC37D0 /* SearchRouter.swift in Sources */,
+				FE4CE93A27237B4B00FC37D0 /* SearchInteractor.swift in Sources */,
+				FE4CE94327237DCE00FC37D0 /* HistoryViewController.swift in Sources */,
+				FE4CE96D27247EE300FC37D0 /* ModelManager.swift in Sources */,
+				FE4CE94527237DDF00FC37D0 /* HistoryInteractor.swift in Sources */,
+				FE4CE9562723811800FC37D0 /* ModelAlbum.swift in Sources */,
+				FE4CE93827237B2800FC37D0 /* SearchViewController.swift in Sources */,
+				FE4CE96527242D0A00FC37D0 /* TracksTableViewCell.swift in Sources */,
 				FE4CE92527237A0A00FC37D0 /* SceneDelegate.swift in Sources */,
+				FE4CE95D2723FD1300FC37D0 /* ModelTracks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +515,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FE4CE94F2723806700FC37D0 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		FE4CE96627247D0E00FC37D0 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FE4CE9502723806700FC37D0 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FE4CE94F2723806700FC37D0 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		FE4CE96727247D0E00FC37D0 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FE4CE96627247D0E00FC37D0 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		FE4CE96927247D0E00FC37D0 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FE4CE96627247D0E00FC37D0 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FE4CE91727237A0A00FC37D0 /* Project object */;
 }
