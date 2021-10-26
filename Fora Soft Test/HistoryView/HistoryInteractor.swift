@@ -33,6 +33,7 @@ final class HistoryInteractor: HistoryInteractorProtocol {
 
 }
 
+//MARK: - Actions Interactor
 extension HistoryInteractor {
     func action(with: ActionHistoryInteractor) {
         switch with {
@@ -44,17 +45,17 @@ extension HistoryInteractor {
             clearHistory()
         }
     }
-
+//Loading history
     func loadData() {
         let data = modelManager?.getRequests()
         presenter?.updateHiestory(data: data)
     }
-
+//SearchRequest for history element
     func selectElement(element: String) {
         modelManager?.addRequestFrorHistory(name: element)
         router?.historyElementQuery()
     }
-
+//Cleaning history
     func clearHistory() {
         modelManager?.clearHistory()
         loadData()

@@ -49,6 +49,7 @@ final class SearchViewController: UIViewController, SearchViewControllerProtocol
     }
 
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         interactor?.action(with: .requestForHistoryElement)
     }
 // Actions this viewController

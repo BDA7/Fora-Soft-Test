@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 class ModuleTracksView {
+// assembly of the module Tracks
     static func build(modelOfAlbum: Album, urlString: String) -> TracksViewController {
         let viewController = TracksViewController()
 

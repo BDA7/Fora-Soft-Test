@@ -7,6 +7,7 @@
 
 import Foundation
 
+//Model for request albums
 struct ModelAlbum: Decodable {
     var resultCount: Int
     var results: [Album]

@@ -8,6 +8,8 @@
 import Foundation
 import RealmSwift
 
+
+//Entity request for history element
 class ModelRequestForHistory: Object {
     @objc dynamic var text = ""
 }

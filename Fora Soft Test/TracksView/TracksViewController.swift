@@ -20,10 +20,11 @@ final class TracksViewController: UIViewController, TracksViewProtocol, UITableV
     var interactor: TracksInteractorProtocol?
 
     var mdl: Album?
-
+//Url of album
     var urlString: String = " "
-
+//Tacks of album
     var tracks: [Tracks]?
+
 
     lazy var imageOfAlbum: UIImageView = {
         let image = UIImageView()
@@ -55,14 +56,25 @@ final class TracksViewController: UIViewController, TracksViewProtocol, UITableV
         tableView.backgroundColor = .black
         return tableView
     }()
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .black
-        navigationController?.navigationBar.isHidden = false
-        navigationController?.navigationBar.isTranslucent = false
-        navigationController?.navigationBar.backgroundColor = .black
-        self.navigationController?.navigationBar.barTintColor = .black
-        navigationController?.navigationBar.tintColor = .white
+        setups()
+    }
+//Update View
+    func updateTracks(newTracks: [Tracks]) {
+        self.tracks = newTracks
+        tableView.reloadData()
+    }
+//Closing this view
+    override func viewWillDisappear(_ animated: Bool) {
+        interactor?.action(with: .goToRootIfViewClosed)
+    }
+//All Setups
+    func setups() {
+        setupNavController()
         setupImageOfAlbum()
         setupNameOfAlbum()
         setupNameOfArtist()
@@ -70,13 +82,8 @@ final class TracksViewController: UIViewController, TracksViewProtocol, UITableV
         settingsSetup()
     }
 
-    func updateTracks(newTracks: [Tracks]) {
-        self.tracks = newTracks
-        tableView.reloadData()
-    }
-
 }
-
+//MARK: - Setup Elements View
 extension TracksViewController {
     func setupImageOfAlbum() {
         view.addSubview(imageOfAlbum)
@@ -108,6 +115,15 @@ extension TracksViewController {
         }
     }
 
+    func settingsSetup() {
+        imageOfAlbum.load(link: mdl?.artworkUrl100)
+        nameOfAlbum.text = mdl?.collectionName
+        nameOfArtist.text = mdl?.artistName
+        interactor?.action(with: .getTracks(urlString: urlString))
+    }
+}
+//MARK: - TableView Settings
+extension TracksViewController {
     func setupTable() {
         view.addSubview(tableView)
         tableView.snp.makeConstraints { make in
@@ -119,15 +135,6 @@ extension TracksViewController {
         self.tableView.separatorColor = .black
     }
 
-    func settingsSetup() {
-        imageOfAlbum.load(link: mdl?.artworkUrl100)
-        nameOfAlbum.text = mdl?.collectionName
-        nameOfArtist.text = mdl?.artistName
-        interactor?.action(with: .getTracks(urlString: urlString))
-    }
-}
-
-extension TracksViewController {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tracks?.count ?? 0
     }
@@ -136,7 +143,7 @@ extension TracksViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellTable", for: indexPath) as! TracksTableViewCell
 
         let track = tracks?[indexPath.row]
-        cell.configure(nameTrack: track?.trackName ?? "none", imageTrack: track?.artworkUrl100 ?? " ")
+        cell.configure(nameTrack: track?.trackName ?? "none", number: "\(indexPath.row + 1)")
 
         return cell
     }
@@ -145,4 +152,14 @@ extension TracksViewController {
         return view.bounds.height/12
     }
 
+}
+//MARK: - NavController Settings
+extension TracksViewController {
+    func setupNavController() {
+        navigationController?.navigationBar.isHidden = false
+        navigationController?.navigationBar.isTranslucent = false
+        navigationController?.navigationBar.backgroundColor = .black
+        self.navigationController?.navigationBar.barTintColor = .black
+        navigationController?.navigationBar.tintColor = .white
+    }
 }

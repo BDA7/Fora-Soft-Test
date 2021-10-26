@@ -23,6 +23,7 @@ final class HistoryViewController: UIViewController, HistoryViewProtocol, UITabl
 
     var interactor: HistoryInteractorProtocol?
 
+//ELements of history
     var history = [ModelHistory]()
 
     lazy var tableView: UITableView = {
@@ -44,7 +45,7 @@ final class HistoryViewController: UIViewController, HistoryViewProtocol, UITabl
         interactor?.action(with: .loadData)
     }
 }
-
+//MARK: - Actions for View
 extension HistoryViewController {
     func action(with: ActionHistoryView) {
         switch with {
@@ -59,6 +60,7 @@ extension HistoryViewController {
     }
 }
 
+//MARK: - TableView Settings
 extension HistoryViewController {
     func setupTable() {
         view.addSubview(tableView)
@@ -69,6 +71,7 @@ extension HistoryViewController {
             make.right.equalToSuperview()
         }
     }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return history.count
     }
@@ -90,13 +93,14 @@ extension HistoryViewController {
     }
 }
 
+//MARK: - NavController Settings
 extension HistoryViewController {
     func settingsNavigationController() {
         self.navigationController?.navigationBar.barTintColor = .black
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(clearHistory))
     }
-
+//Button for clear history
     @objc func clearHistory(_ sender: UIButton) {
         interactor?.action(with: .clearHistory)
     }

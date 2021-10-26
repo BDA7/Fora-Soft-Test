@@ -10,6 +10,7 @@ import Foundation
 
 enum ActionTracksInteractor {
     case getTracks(urlString: String)
+    case goToRootIfViewClosed
 }
 
 protocol TracksInteractorProtocol {
@@ -26,14 +27,17 @@ final class TracksInteractor: TracksInteractorProtocol {
     let net = Network()
 }
 
+//MARK: - Actions Interactor
 extension TracksInteractor {
     func action(with: ActionTracksInteractor) {
         switch with {
         case .getTracks(let urlString):
             getTracks(urlString: urlString)
+        case .goToRootIfViewClosed:
+            goToRootIfViewClosed()
         }
     }
-
+//Request tracks of album
     func getTracks(urlString: String) {
         net.requestTracks(urlString: urlString) { [weak self] (result) in
             switch result {
@@ -44,5 +48,9 @@ extension TracksInteractor {
                 print(error)
             }
         }
+    }
+//Back to searchView
+    func goToRootIfViewClosed() {
+        router?.goToRoot()
     }
 }

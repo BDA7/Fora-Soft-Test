@@ -22,6 +22,7 @@ final class TracksPresenter: TracksPresenterProtocol {
     var view: TracksViewProtocol?
 }
 
+//MARK: - Actions Presenter
 extension TracksPresenter {
     func action(with: TracksPresenterAction) {
         switch with {
@@ -30,7 +31,7 @@ extension TracksPresenter {
             modelSettings(newModel: newModel)
         }
     }
-
+//Update View
     func modelSettings(newModel: ModelTracks) {
         var model = newModel.results
         model.removeFirst()

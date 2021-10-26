@@ -9,6 +9,7 @@ import UIKit
 import SnapKit
 
 class AlbumsCollectionViewCell: UICollectionViewCell {
+
     override func layoutSubviews() {
            super.layoutSubviews()
            setupContainer()
@@ -42,7 +43,7 @@ class AlbumsCollectionViewCell: UICollectionViewCell {
            return image
        }()
 
-
+//Setups
        func setupContainer() {
            contentView.addSubview(container)
            container.snp.makeConstraints { make in
@@ -72,7 +73,7 @@ class AlbumsCollectionViewCell: UICollectionViewCell {
                make.right.equalTo(container)
            }
        }
-
+//Config Cell
        public func configure(nameText: String, urlImage: String) {
            nameOfAlbum.text = nameText
            imageOfAlbum.load(link: urlImage)

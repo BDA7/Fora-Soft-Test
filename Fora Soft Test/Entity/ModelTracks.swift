@@ -7,7 +7,7 @@
 
 import Foundation
 
-
+// Model for tracks of almub
 struct ModelTracks: Decodable {
     var resultCount: Int
     var results: [Tracks]

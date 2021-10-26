@@ -21,9 +21,13 @@ protocol ModelManagerProtocol {
 final class ModelManager: ModelManagerProtocol {
     let realm = try! Realm()
 
+//Elements history
     var items: Results<ModelHistory>!
+
+//Element for request History
     var itemsHistoryRequest: Results<ModelRequestForHistory>!
 
+//Add element to history
     func addRequest(text: String) {
         try! realm.write {
             let model = ModelHistory()
@@ -32,19 +36,19 @@ final class ModelManager: ModelManagerProtocol {
             realm.add(model)
         }
     }
-
+//Get all elements history
     func getRequests() -> Results<ModelHistory> {
         items = realm.objects(ModelHistory.self)
         return items
     }
-
+//Clear history DB
     func clearHistory() {
         try! realm.write {
             let models = realm.objects(ModelHistory.self)
             realm.delete(models)
         }
     }
-
+//Add for request history element
     func addRequestFrorHistory(name: String) {
         try! realm.write {
             let model = ModelRequestForHistory()
@@ -52,12 +56,12 @@ final class ModelManager: ModelManagerProtocol {
             realm.add(model)
         }
     }
-
+//Get for request history element
     func getRequestForStory() -> Results<ModelRequestForHistory> {
         itemsHistoryRequest = realm.objects(ModelRequestForHistory.self)
         return itemsHistoryRequest
     }
-
+//Clear for request history element
     func clearRequest() {
         try! realm.write {
             let models = realm.objects(ModelRequestForHistory.self)
@@ -67,6 +71,7 @@ final class ModelManager: ModelManagerProtocol {
     
 }
 
+//Parse results to array
 extension Results {
     func toArray<T>(ofType: T.Type) -> [T] {
         var array = [T]()
