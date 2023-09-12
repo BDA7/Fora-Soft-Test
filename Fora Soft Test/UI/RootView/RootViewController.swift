@@ -12,6 +12,8 @@ class RootViewController: UITabBarController {
     let searchView = SearchModule.build()
 //Create HistoryView
     let historyView = HistoryModule.build()
+    
+    let specialView = SpecialModule.build()
 
 
     override func viewDidLoad() {
@@ -25,8 +27,11 @@ class RootViewController: UITabBarController {
 
 //Wrapping in navigationController and add to tabBar
     func setupViews() {
-        viewControllers = [createNavControllers(for: searchView, title: "Search", image: UIImage(systemName: "magnifyingglass")!, selectImage: UIImage(systemName: "magnifyingglass")!),
-                           createNavControllers(for: historyView, title: "History", image: UIImage(systemName: "star")!, selectImage: UIImage(systemName: "star")!) ]
+        viewControllers = [
+            createNavControllers(for: searchView, title: "Search", image: UIImage(systemName: "magnifyingglass")!, selectImage: UIImage(systemName: "magnifyingglass")!),
+            createNavControllers(for: historyView, title: "History", image: UIImage(systemName: "book")!, selectImage: UIImage(systemName: "book.fill")!),
+            createNavControllers(for: specialView, title: "Special", image: UIImage(systemName: "star")!, selectImage: UIImage(systemName: "star.fill")!)
+        ]
     }
 
 

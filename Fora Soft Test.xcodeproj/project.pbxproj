@@ -43,6 +43,11 @@
 		FEB4F47F2AB100A7000EA035 /* AuthRegConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB4F47E2AB100A7000EA035 /* AuthRegConfiguration.swift */; };
 		FEB4F4812AB10161000EA035 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB4F4802AB10161000EA035 /* AppCoordinator.swift */; };
 		FEB4F4832AB10836000EA035 /* ModelUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB4F4822AB10836000EA035 /* ModelUser.swift */; };
+		FEB4F4862AB11050000EA035 /* SpecialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB4F4852AB11050000EA035 /* SpecialViewController.swift */; };
+		FEB4F4882AB11083000EA035 /* SpecialInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB4F4872AB11083000EA035 /* SpecialInteractor.swift */; };
+		FEB4F48A2AB110A7000EA035 /* SpecialPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB4F4892AB110A7000EA035 /* SpecialPresenter.swift */; };
+		FEB4F48C2AB110C8000EA035 /* SpecialModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB4F48B2AB110C8000EA035 /* SpecialModule.swift */; };
+		FEB4F48F2AB112AE000EA035 /* SpecialCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB4F48E2AB112AE000EA035 /* SpecialCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +86,11 @@
 		FEB4F47E2AB100A7000EA035 /* AuthRegConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRegConfiguration.swift; sourceTree = "<group>"; };
 		FEB4F4802AB10161000EA035 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		FEB4F4822AB10836000EA035 /* ModelUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelUser.swift; sourceTree = "<group>"; };
+		FEB4F4852AB11050000EA035 /* SpecialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialViewController.swift; sourceTree = "<group>"; };
+		FEB4F4872AB11083000EA035 /* SpecialInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialInteractor.swift; sourceTree = "<group>"; };
+		FEB4F4892AB110A7000EA035 /* SpecialPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialPresenter.swift; sourceTree = "<group>"; };
+		FEB4F48B2AB110C8000EA035 /* SpecialModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialModule.swift; sourceTree = "<group>"; };
+		FEB4F48E2AB112AE000EA035 /* SpecialCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecialCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +198,7 @@
 		FEB4F4742AB0FA0B000EA035 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				FEB4F4842AB1103C000EA035 /* SpecialView */,
 				FEB4F47B2AB0FA71000EA035 /* AuthView */,
 				FEB4F4792AB0FA51000EA035 /* LaunchScreen */,
 				FEB4F4782AB0FA40000EA035 /* RootView */,
@@ -256,6 +267,26 @@
 				FEB4F4802AB10161000EA035 /* AppCoordinator.swift */,
 			);
 			path = AuthView;
+			sourceTree = "<group>";
+		};
+		FEB4F4842AB1103C000EA035 /* SpecialView */ = {
+			isa = PBXGroup;
+			children = (
+				FEB4F48D2AB11295000EA035 /* SpecialCollectionViewCell */,
+				FEB4F4852AB11050000EA035 /* SpecialViewController.swift */,
+				FEB4F4872AB11083000EA035 /* SpecialInteractor.swift */,
+				FEB4F4892AB110A7000EA035 /* SpecialPresenter.swift */,
+				FEB4F48B2AB110C8000EA035 /* SpecialModule.swift */,
+			);
+			path = SpecialView;
+			sourceTree = "<group>";
+		};
+		FEB4F48D2AB11295000EA035 /* SpecialCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				FEB4F48E2AB112AE000EA035 /* SpecialCollectionViewCell.swift */,
+			);
+			path = SpecialCollectionViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,12 +376,16 @@
 				FE4CE94727237DEC00FC37D0 /* HistoryPresenter.swift in Sources */,
 				FEB4F47F2AB100A7000EA035 /* AuthRegConfiguration.swift in Sources */,
 				FE4CE9592723FC6E00FC37D0 /* TracksViewController.swift in Sources */,
+				FEB4F48F2AB112AE000EA035 /* SpecialCollectionViewCell.swift in Sources */,
 				FE4CE94B27237E0400FC37D0 /* HistoryModule.swift in Sources */,
 				FEB4F4812AB10161000EA035 /* AppCoordinator.swift in Sources */,
 				FEB4F47D2AB0FA8A000EA035 /* AuthViewController.swift in Sources */,
 				FE4CE94927237DF900FC37D0 /* HistoryRouter.swift in Sources */,
+				FEB4F48C2AB110C8000EA035 /* SpecialModule.swift in Sources */,
 				FE4CE9612723FD7A00FC37D0 /* TracksPresenter.swift in Sources */,
 				FEB4F4832AB10836000EA035 /* ModelUser.swift in Sources */,
+				FEB4F4862AB11050000EA035 /* SpecialViewController.swift in Sources */,
+				FEB4F4882AB11083000EA035 /* SpecialInteractor.swift in Sources */,
 				FE4CE92727237A0A00FC37D0 /* RootViewController.swift in Sources */,
 				FE4CE94027237B8400FC37D0 /* SearchModule.swift in Sources */,
 				FE4CE954272380E000FC37D0 /* Network.swift in Sources */,
@@ -365,6 +400,7 @@
 				FE4CE94527237DDF00FC37D0 /* HistoryInteractor.swift in Sources */,
 				FE4CE9562723811800FC37D0 /* ModelAlbum.swift in Sources */,
 				FE4CE93827237B2800FC37D0 /* SearchViewController.swift in Sources */,
+				FEB4F48A2AB110A7000EA035 /* SpecialPresenter.swift in Sources */,
 				FE4CE96527242D0A00FC37D0 /* TracksTableViewCell.swift in Sources */,
 				FE4CE92527237A0A00FC37D0 /* SceneDelegate.swift in Sources */,
 				FE4CE95D2723FD1300FC37D0 /* ModelTracks.swift in Sources */,

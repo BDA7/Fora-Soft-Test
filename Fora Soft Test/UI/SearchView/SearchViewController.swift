@@ -85,6 +85,8 @@ extension SearchViewController {
 // Add element request in cell
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(AlbumsCollectionViewCell.self), for: indexPath) as! AlbumsCollectionViewCell
+        
+        cell.interactor = interactor as? SearchInteracrotCellProtocol
 
         guard let album = albums?[indexPath.row] else { return cell }
         

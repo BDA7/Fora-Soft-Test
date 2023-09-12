@@ -13,4 +13,7 @@ class ModelHistory: Object {
     @objc dynamic var text = ""
 }
 
-
+class SpecialObject: Object {
+    @objc dynamic var collectionName = ""
+    @objc dynamic var urlString = ""
+}

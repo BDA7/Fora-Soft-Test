@@ -13,6 +13,11 @@ enum InteractorAction {
     case requestForHistoryElement
 }
 
+protocol SearchInteracrotCellProtocol: AnyObject {
+    func addToRealm(collectionName: String, urlString: String)
+    func findSpecial(collectionName: String) -> Bool
+}
+
 protocol SearchInteractorProtocol {
     var presenter: SearchPresenterProtocol? { get set }
 
@@ -90,4 +95,14 @@ extension SearchInteractor {
     }
 }
 
+extension SearchInteractor: SearchInteracrotCellProtocol {
+    func addToRealm(collectionName: String, urlString: String) {
+        modelManager?.addToSpecial(collectionName: collectionName, urlString: urlString)
+    }
+    
+    func findSpecial(collectionName: String) -> Bool {
+        guard let flag = modelManager?.findSpecial(collectionName: collectionName) else { return false }
+        return flag
+    }
+}
 

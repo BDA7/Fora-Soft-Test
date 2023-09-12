@@ -9,12 +9,18 @@ import UIKit
 import SnapKit
 
 class AlbumsCollectionViewCell: UICollectionViewCell {
-
+    
+    public var interactor: SearchInteracrotCellProtocol?
+    
+    private var collectionName: String = ""
+    private var urlString: String = ""
+    
     override func layoutSubviews() {
            super.layoutSubviews()
            setupContainer()
            setupImage()
            setupName()
+           setupSpecialButton()
        }
 
        lazy var container: UIView = {
@@ -42,6 +48,8 @@ class AlbumsCollectionViewCell: UICollectionViewCell {
           let image = UIImageView()
            return image
        }()
+    
+       private let specialButton = UIButton()
 
 //Setups
        func setupContainer() {
@@ -73,9 +81,37 @@ class AlbumsCollectionViewCell: UICollectionViewCell {
                make.right.equalTo(container)
            }
        }
+       
+    private func setupSpecialButton() {
+        specialButton.addTarget(self, action: #selector(specialAction), for: .touchUpInside)
+        specialButton.tintColor = .yellow
+        container.addSubview(specialButton)
+        specialButton.snp.makeConstraints {
+            $0.width.height.equalTo(30)
+            $0.trailing.equalToSuperview().offset(-10)
+            $0.top.equalToSuperview().offset(10)
+        }
+    }
 //Config Cell
        public func configure(nameText: String, urlImage: String) {
+           collectionName = nameText
+           urlString = urlImage
            nameOfAlbum.text = nameText
            imageOfAlbum.load(link: urlImage)
+           findCell()
        }
+    
+    @objc
+    private func specialAction(_ sender: UIButton) {
+        interactor?.addToRealm(collectionName: collectionName, urlString: urlString)
+        findCell()
+        
+    }
+    
+    private func findCell() {
+        guard let flag = interactor?.findSpecial(collectionName: collectionName) else { return }
+        specialButton.setImage(
+            flag ? UIImage(systemName: "star.fill") : UIImage(systemName: "star"),
+            for: .normal)
+    }
 }

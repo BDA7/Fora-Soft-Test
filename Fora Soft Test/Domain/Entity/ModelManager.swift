@@ -16,6 +16,9 @@ protocol ModelManagerProtocol {
     func getRequestForStory() -> Results<ModelRequestForHistory>
     func clearRequest()
     func addRequestFrorHistory(name: String)
+    func addToSpecial(collectionName: String, urlString: String)
+    func getAllSpecial() -> Results<SpecialObject>
+    func findSpecial(collectionName: String) -> Bool
 }
 
 final class ModelManager: ModelManagerProtocol {
@@ -26,6 +29,8 @@ final class ModelManager: ModelManagerProtocol {
 
 //Element for request History
     var itemsHistoryRequest: Results<ModelRequestForHistory>!
+    
+    var itemsSpecial: Results<SpecialObject>!
 
 //Add element to history
     func addRequest(text: String) {
@@ -69,6 +74,35 @@ final class ModelManager: ModelManagerProtocol {
         }
     }
     
+}
+
+extension ModelManager {
+    func getAllSpecial() -> Results<SpecialObject> {
+        itemsSpecial = realm.objects(SpecialObject.self)
+        return itemsSpecial
+    }
+    
+    func addToSpecial(collectionName: String, urlString: String) {
+        if !findSpecial(collectionName: collectionName) {
+            try! realm.write({
+                let model = SpecialObject()
+                model.collectionName = collectionName
+                model.urlString = urlString
+                realm.add(model)
+            })
+        } else {
+            try! realm.write({
+                guard let model = realm.objects(SpecialObject.self).first(where: {$0.collectionName == collectionName}) else { return }
+                realm.delete(model)
+            })
+        }
+    }
+    
+    func findSpecial(collectionName: String) -> Bool {
+        guard let _ = realm.objects(SpecialObject.self).first(where: {$0.collectionName == collectionName}) else { return false }
+        
+        return true
+    }
 }
 
 //Parse results to array
