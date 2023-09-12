@@ -42,6 +42,7 @@
 		FEB4F47D2AB0FA8A000EA035 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB4F47C2AB0FA8A000EA035 /* AuthViewController.swift */; };
 		FEB4F47F2AB100A7000EA035 /* AuthRegConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB4F47E2AB100A7000EA035 /* AuthRegConfiguration.swift */; };
 		FEB4F4812AB10161000EA035 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB4F4802AB10161000EA035 /* AppCoordinator.swift */; };
+		FEB4F4832AB10836000EA035 /* ModelUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB4F4822AB10836000EA035 /* ModelUser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +80,7 @@
 		FEB4F47C2AB0FA8A000EA035 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		FEB4F47E2AB100A7000EA035 /* AuthRegConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRegConfiguration.swift; sourceTree = "<group>"; };
 		FEB4F4802AB10161000EA035 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		FEB4F4822AB10836000EA035 /* ModelUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelUser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +180,7 @@
 				FE4CE96C27247EE300FC37D0 /* ModelManager.swift */,
 				FE4CE96E27247EFF00FC37D0 /* ModelHistory.swift */,
 				FE2FD3AA2725A5460090A5C3 /* ModelRequestForHistory.swift */,
+				FEB4F4822AB10836000EA035 /* ModelUser.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -347,6 +350,7 @@
 				FEB4F47D2AB0FA8A000EA035 /* AuthViewController.swift in Sources */,
 				FE4CE94927237DF900FC37D0 /* HistoryRouter.swift in Sources */,
 				FE4CE9612723FD7A00FC37D0 /* TracksPresenter.swift in Sources */,
+				FEB4F4832AB10836000EA035 /* ModelUser.swift in Sources */,
 				FE4CE92727237A0A00FC37D0 /* RootViewController.swift in Sources */,
 				FE4CE94027237B8400FC37D0 /* SearchModule.swift in Sources */,
 				FE4CE954272380E000FC37D0 /* Network.swift in Sources */,

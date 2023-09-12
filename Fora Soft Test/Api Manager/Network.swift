@@ -50,6 +50,35 @@ class Network {
             }
         }.resume()
     }
+    
+    func autorizeAndRegister(email: String, password: String, comletion: @escaping (Result<Bool, Error>) -> Void) {
+        guard let url = URL(string: "https://itunes.apple.com/auth") else { return }
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        do {
+            request.httpBody = try JSONSerialization.data(withJSONObject: ModelUser(email: email, password: password), options: .prettyPrinted)
+        } catch {
+            comletion(.failure(error))
+        }
+        
+        URLSession.shared.dataTask(with: request) {data, _, error in
+            DispatchQueue.main.async {
+                if let error = error {
+                    comletion(.failure(error))
+                    return
+                }
+                guard let data = data else { return }
+                
+                do {
+                    let answer = try JSONDecoder().decode(RequestAuth.self, from: data)
+                    comletion(.success(answer.flag))
+                } catch {
+                    comletion(.failure(error))
+                }
+                
+            }
+        }
+    }
 }
 // image download by url
 extension UIImageView {
