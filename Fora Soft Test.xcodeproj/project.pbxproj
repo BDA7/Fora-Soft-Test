@@ -39,6 +39,9 @@
 		FE4CE96A27247D0E00FC37D0 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FE4CE96927247D0E00FC37D0 /* RealmSwift */; };
 		FE4CE96D27247EE300FC37D0 /* ModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4CE96C27247EE300FC37D0 /* ModelManager.swift */; };
 		FE4CE96F27247EFF00FC37D0 /* ModelHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4CE96E27247EFF00FC37D0 /* ModelHistory.swift */; };
+		FEB4F47D2AB0FA8A000EA035 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB4F47C2AB0FA8A000EA035 /* AuthViewController.swift */; };
+		FEB4F47F2AB100A7000EA035 /* AuthRegConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB4F47E2AB100A7000EA035 /* AuthRegConfiguration.swift */; };
+		FEB4F4812AB10161000EA035 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB4F4802AB10161000EA035 /* AppCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +76,9 @@
 		FE4CE96427242D0A00FC37D0 /* TracksTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracksTableViewCell.swift; sourceTree = "<group>"; };
 		FE4CE96C27247EE300FC37D0 /* ModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelManager.swift; sourceTree = "<group>"; };
 		FE4CE96E27247EFF00FC37D0 /* ModelHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelHistory.swift; sourceTree = "<group>"; };
+		FEB4F47C2AB0FA8A000EA035 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		FEB4F47E2AB100A7000EA035 /* AuthRegConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRegConfiguration.swift; sourceTree = "<group>"; };
+		FEB4F4802AB10161000EA035 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,17 +114,11 @@
 		FE4CE92127237A0A00FC37D0 /* Fora Soft Test */ = {
 			isa = PBXGroup;
 			children = (
-				FE4CE96B27247EAF00FC37D0 /* Entity */,
-				FE4CE93627237B0E00FC37D0 /* SearchView */,
-				FE4CE94127237DA500FC37D0 /* HistoryView */,
-				FE4CE952272380D100FC37D0 /* Helpers */,
-				FE4CE9572723FC4100FC37D0 /* TracksView */,
-				FE4CE92227237A0A00FC37D0 /* AppDelegate.swift */,
-				FE4CE92427237A0A00FC37D0 /* SceneDelegate.swift */,
-				FE4CE92627237A0A00FC37D0 /* RootViewController.swift */,
+				FEB4F4772AB0FA31000EA035 /* App */,
+				FEB4F4762AB0FA24000EA035 /* Api Manager */,
+				FEB4F4752AB0FA1A000EA035 /* Domain */,
+				FEB4F4742AB0FA0B000EA035 /* UI */,
 				FE4CE92827237A0A00FC37D0 /* Main.storyboard */,
-				FE4CE92B27237A1100FC37D0 /* Assets.xcassets */,
-				FE4CE92D27237A1100FC37D0 /* LaunchScreen.storyboard */,
 				FE4CE93027237A1100FC37D0 /* Info.plist */,
 			);
 			path = "Fora Soft Test";
@@ -157,14 +157,6 @@
 			path = AlbumsCollection;
 			sourceTree = "<group>";
 		};
-		FE4CE952272380D100FC37D0 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				FE4CE953272380DF00FC37D0 /* Network.swift */,
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
 		FE4CE9572723FC4100FC37D0 /* TracksView */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +180,79 @@
 				FE2FD3AA2725A5460090A5C3 /* ModelRequestForHistory.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		FEB4F4742AB0FA0B000EA035 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				FEB4F47B2AB0FA71000EA035 /* AuthView */,
+				FEB4F4792AB0FA51000EA035 /* LaunchScreen */,
+				FEB4F4782AB0FA40000EA035 /* RootView */,
+				FE4CE9572723FC4100FC37D0 /* TracksView */,
+				FE4CE94127237DA500FC37D0 /* HistoryView */,
+				FE4CE93627237B0E00FC37D0 /* SearchView */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		FEB4F4752AB0FA1A000EA035 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				FEB4F47A2AB0FA5F000EA035 /* Assets */,
+				FE4CE96B27247EAF00FC37D0 /* Entity */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		FEB4F4762AB0FA24000EA035 /* Api Manager */ = {
+			isa = PBXGroup;
+			children = (
+				FE4CE953272380DF00FC37D0 /* Network.swift */,
+			);
+			path = "Api Manager";
+			sourceTree = "<group>";
+		};
+		FEB4F4772AB0FA31000EA035 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				FE4CE92227237A0A00FC37D0 /* AppDelegate.swift */,
+				FE4CE92427237A0A00FC37D0 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		FEB4F4782AB0FA40000EA035 /* RootView */ = {
+			isa = PBXGroup;
+			children = (
+				FE4CE92627237A0A00FC37D0 /* RootViewController.swift */,
+			);
+			path = RootView;
+			sourceTree = "<group>";
+		};
+		FEB4F4792AB0FA51000EA035 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				FE4CE92D27237A1100FC37D0 /* LaunchScreen.storyboard */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		FEB4F47A2AB0FA5F000EA035 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				FE4CE92B27237A1100FC37D0 /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		FEB4F47B2AB0FA71000EA035 /* AuthView */ = {
+			isa = PBXGroup;
+			children = (
+				FEB4F47C2AB0FA8A000EA035 /* AuthViewController.swift */,
+				FEB4F47E2AB100A7000EA035 /* AuthRegConfiguration.swift */,
+				FEB4F4802AB10161000EA035 /* AppCoordinator.swift */,
+			);
+			path = AuthView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,8 +340,11 @@
 				FE2FD3AB2725A5460090A5C3 /* ModelRequestForHistory.swift in Sources */,
 				FE4CE9632723FD9200FC37D0 /* TracksRouter.swift in Sources */,
 				FE4CE94727237DEC00FC37D0 /* HistoryPresenter.swift in Sources */,
+				FEB4F47F2AB100A7000EA035 /* AuthRegConfiguration.swift in Sources */,
 				FE4CE9592723FC6E00FC37D0 /* TracksViewController.swift in Sources */,
 				FE4CE94B27237E0400FC37D0 /* HistoryModule.swift in Sources */,
+				FEB4F4812AB10161000EA035 /* AppCoordinator.swift in Sources */,
+				FEB4F47D2AB0FA8A000EA035 /* AuthViewController.swift in Sources */,
 				FE4CE94927237DF900FC37D0 /* HistoryRouter.swift in Sources */,
 				FE4CE9612723FD7A00FC37D0 /* TracksPresenter.swift in Sources */,
 				FE4CE92727237A0A00FC37D0 /* RootViewController.swift in Sources */,
